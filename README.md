@@ -1,9 +1,11 @@
 # Intelligent and Connected Mailbox
-A project by Rohan Raghuraman, Anhadveer Khokar and Nihar Garg
+A project by Rohan Raghuraman, Anhadveer Khokar and Nihar Garg.  
 For the Internet of Things (IoT) course at Columbia University in the City of New York
 
 ### What:
-We aim to create an Intelligent and Connected Mailbox (ICM) that can read the handwriting off an envelope and determine whether the mail has reached the correct person. If it is correct, it will notify the user that they have new mail and even attempt to categorize it for better organization. If it is incorrect, it will reject the mail and notify the deliverer to return the mail to its sender.
+- We aim to create an Intelligent and Connected Mailbox (ICM) that can read the handwriting off an envelope and determine whether the mail has reached the correct person.
+- If it is correct, it will notify the user that they have new mail and even attempt to categorize it for better organization.
+- If it is incorrect, it will reject the mail and notify the deliverer to return the mail to its sender.
 
 ### Why:
 - The ICM is a consumer-facing device that not only improves efficiency and organization, but also helps secure your mail and prevent robbery by instantly notifying the user when they have new mail.
@@ -23,10 +25,9 @@ We aim to create an Intelligent and Connected Mailbox (ICM) that can read the ha
 | --- | --- |
 | 1) Mail Detection | Detect that a new mail was inserted into the mailbox and click a picture |
 | 2) Optical Character Recognition | Process the image using openCV and read the text on the envelope |
-| 3) Correct Delivery Checker | Determine if receiver name on the envelope matches the name of the mailbox owner, and returns envelope to mailman if not * |
+| 3) Correct Delivery Checker | Determine if receiver name on the envelope matches the name of the mailbox owner, and returns envelope to mailman if not <sup>[1]</sup> |
 | 4) Mail Categorizer | If mail was accepted, use ML model to categorize and label mail as Spam/Ham |
 | 5) Smartphone Notifier | If mail is not spam, then send an SMS to user's smartphone with sender's name |
-| 6) Data Visualizer | Show data trends over time such as percent of spam mail, time of day mail is delivered, and number of mails currently in mailbox ** |
+| 6) Data Visualizer on the Cloud | Show data trends over time such as percent of spam mail, time of day mail is delivered, and number of mails currently in mailbox |
 
-* We assume the mailman has delivered the mail to the right address so we do not compare receiver address to mailbox address, but we are checking receiver's name in case the mail is addressed to a previous resident who no longer lives at the address.
-** User can access data visualizations on the cloud.
+<sup>[1]</sup> We assume the mailman has delivered the mail to the right address so we do not compare receiver address to mailbox address, but we are checking receiver's name in case the mail is addressed to a previous resident who no longer lives at the address.
