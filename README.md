@@ -1,6 +1,8 @@
 # Intelligent and Connected Mailbox
-A project by Rohan Raghuraman, Anhadveer Khokar and Nihar Garg.  
+A project by Rohan Raghuraman, Anhadveer Khokar and Nihar Garg
 For the Internet of Things (IoT) course at Columbia University in the City of New York
+
+https://youtu.be/owcQavW3YhE
 
 ### What:
 - We aim to create an Intelligent and Connected Mailbox (ICM) that can read the handwriting off an envelope and determine whether the mail has reached the correct person.
@@ -16,9 +18,10 @@ For the Internet of Things (IoT) course at Columbia University in the City of Ne
 - It can also be a great help towards elderly people or people with various disabilities or sensory impairments by being able to notify them when they get new mail, so they don’t have to check for mail everyday. It will also help categorize the mail for them and send back any incorrect ones.
 
 ### How:
-- **Embedded Systems**: A microcontroller for processing, a light dependent resistor (LDR) for sensing presence of a letter, cameras to read text, servo motor actuation for rejecting wrong mail.
-- **Cloud Component**: A Computer Vision API to recognize & read the handwriting on the envelope and convert it to text.
-- **Data Analytics & Visualization**: A smartphone app that receives notifications when a new mail is received and the converted text from the handwriting on the envelope. The app will also attempt to give a categorization label to the mail and visualize any data trends or inferences that can be made.
+- **Embedded Systems**: The integration of a Raspberry Pi microprocessor, a light dependent resistor (LDR) for sensing presence of a letter, a camera to click an image, and a servo motor to actuate a platform to accept/reject mail.
+- **Computer Vision**: An Optical Character Recognition (OCR) algorithm to transform an image of the envelope, recognize words in the image and convert them to text, and try various enhancements on image until a valid name and address is determined.
+- **Supervised Machine Learning**: A k-nearest neighbors (kNN) classifier algorithm with an accuracy of 92% predicted the category (spam/ham) that the mail sender belongs to. If not spam, an SMS message is sent using the Twilio messaging API to notify the user of a new mail.
+- **Data Visualization on the Cloud**: The user also receives a link to an online data visualization where they can access any trends and make inferences from the data. Some examples of graphs were total number of mails per day and percent of mails that are spam.
 
 ### Feature List:
 | Feature | Description |
